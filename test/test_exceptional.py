@@ -22,24 +22,3 @@ class ExceptionalTest(unittest.TestCase):
         except AttributeError:
             test_obj.yakshaAssert("TestErrorTypeForPiglatin",True,"exception")
             print("TestErrorTypeForPiglatin = Passed")
-
-
-    def test_result_for_25_incorrect_result(self):
-        n=count_steps(25)
-        test_obj = TestUtils()
-        if n==1:
-            test_obj.yakshaAssert("TestReturnTypeIntIncorrectResult", False, "exception")
-            print("TestResultFor25IncorrectResult = Failed")
-        else:
-            test_obj.yakshaAssert("TestResultFor25IncorrectResult", True, "exception")
-            print("TestResultFor25IncorrectResult = Passed")
-
-    def test_result_for_hellow_incorrect_result(self):
-        s=get_piglatin("Hellow")
-        test_obj = TestUtils()
-        if s=="ellowH":
-            test_obj.yakshaAssert("TestResultForHellowIncorrectResult", False, "exception")
-            print("TestResultForHellowIncorrectResult = Failed")
-        else:
-            test_obj.yakshaAssert("TestResultForHellowIncorrectResult", True, "exception")
-            print("TestResultForHellowIncorrectResult = Passed")
